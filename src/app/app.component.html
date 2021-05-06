@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO angular</title>
+</head>
+<body>
+  <form [formGroup]="miFormulario">
+    <!-- Usuario<br/> <input 
+     type="text"
+      class="form-control"
+       formControlName="Nombre"><br/><br/> -->
+   1. Usuario: <br/>
+    <select formControlName = "Usuario" > 
+         <option  value = " 1 " > Usuario 1 </option > 
+         <option  value = " 2 " > Usuario 2 </option > 
+         <option  value = " 3 " > Usuario 3 </option > 
+     </select><br/><br/> 
+  
+   2. Formulario: <br/>
+    <select formControlName = "Formulario" > 
+      <option  value = " 1 " > Categoría 1 </option > 
+      <option  value = " 2 " > Categoría 2 </option > 
+      <option  value = " 3 " > Categoría 3 </option > 
+  </select><br/><br/> 
+
+  3. Tienes codigo<br/>
+   <input formControlName = "Si" type="radio" >Si<br/>
+   <input formControlName = "No" type="radio" >No <br/>
+   
+
+   <br/>
+ 4. codigo Usuario <br/>
+  <input 
+    type="id" 
+    class="form-control"  
+    formControlName="id">
+    <br/><br/><button type="submit" class="btn btn-primary">Aceptar</button>
+
+    
+
+   </form>
+   {{ miFormulario.value | json}}
+</body>
+</html>
